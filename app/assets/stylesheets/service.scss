@@ -1,0 +1,27 @@
+.nav-sort {
+    background-color: #f2f2f2;
+}
+
+.dropdown-toggle::after {
+    display: none !important;
+}
+
+#Service {
+    .main {
+        height: 40%;
+    }
+}
+
+.zoom {
+    transition: transform .2s;
+    margin: 0 auto;
+    background: white;
+}
+
+.zoom:hover {
+    -ms-transform: scale(1.2); 
+    -webkit-transform: scale(1.2); 
+    transform: scale(1.2); 
+    z-index: 1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

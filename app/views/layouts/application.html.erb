@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html>
-  <head>
+  <head lang="en">
     <title><%= full_title(yield(:title)) %></title>
     <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag    'application', media: 'all',
-                                              'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= render 'layouts/shim' %>
   </head>
-  <body>
+  <body id="<%= yield(:title) %>">
+    <div class="jumbotron main">
+    <%= render partial: 'layouts/navbar' %>
+    <%= render 'layouts/header' %>
+    </div>
     <%= yield %>
+    <%= render 'layouts/footer' %>
+    
   </body>
 </html>
