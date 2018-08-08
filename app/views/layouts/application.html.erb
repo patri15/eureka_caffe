@@ -3,15 +3,18 @@
   <head lang="en">
     <title><%= full_title(yield(:title)) %></title>
     <%= csrf_meta_tags %>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Patricia Ciortea">
+    <link rel="icon" href="https://cdn.onlinewebfonts.com/svg/img_255075.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= render 'layouts/shim' %>
+    <% render 'layouts/shim' %>
   </head>
   <body id="<%= yield(:title) %>">
-    <div class="jumbotron main">
-    <%= render partial: 'layouts/navbar' %>
-    <%= render 'layouts/header' %>
-    </div>
+    <%= render 'layouts/navbar' %>
     <%= yield %>
     <%= render 'layouts/footer' %>
     

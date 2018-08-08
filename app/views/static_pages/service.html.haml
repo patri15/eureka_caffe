@@ -1,3 +1,4 @@
+= render 'layouts/header' 
 - provide(:title, "Service")
 %nav.navbar.nav-sort.navbar-expand-md
   .container
@@ -6,7 +7,7 @@
         %i.fas.fa-bars
       #collapsibleNavbar2.collapse.navbar-collapse
         %ul.navbar-nav
-          .col-lg-3.text-left
+          .col-lg-3.col-md-2.text-left
             %li.nav-item.dropdown
               %a#navbardrop.nav-link.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
                 CATEGORY
@@ -15,7 +16,7 @@
                 %a.dropdown-item{:href => "#"} Breakfast
                 %a.dropdown-item{:href => "#"} Lunch
                 %a.dropdown-item{:href => "#"} Dinner
-          .col-lg-3
+          .col-lg-3.col-md-2
             %li.nav-item.dropdown
               %a#navbardrop.nav-link.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
                 SORTING
@@ -25,7 +26,7 @@
                 %a.dropdown-item{:href => "#"} Second Courses
                 %a.dropdown-item{:href => "#"} Salads
                 %a.dropdown-item{:href => "#"} Deserts
-          .col-lg-3
+          .col-lg-4.col-md-2
             %li.nav-item.dropdown
               %a#navbardrop.nav-link.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
                 VEGETARIAN
@@ -35,17 +36,18 @@
                 %a.dropdown-item{:href => "#"} Second Courses
                 %a.dropdown-item{:href => "#"} Salads
                 %a.dropdown-item{:href => "#"} Deserts
-          .col-lg-3
+          .col-lg-3.col-md-2
           %li.nav-item.dropdown
             .col-lg-3
               %a#navbardrop.nav-link.dropdown-toggle{"data-toggle" => "dropdown", :href => "#", :style => "color: black"}
                 PRICE
-          .col-lg-6.col-md-8
+          .col-lg-6.col-md-3
             %li.nav-item.dropdown
-              %form
-                %div{"data-role" => "rangeslider"}
-                  %input#range-1a{"data-popup-enabled" => "false", "data-show-value" => "false", :max => "100", :min => "0", :name => "range-1a", :type => "range", :value => "40"}/
-                  %input#range-1b{"data-popup-enabled" => "false", "data-show-value" => "false", :max => "100", :min => "0", :name => "range-1b", :type => "range", :value => "80"}/
+              %section.range-slider
+                %span.rangeValues
+                %input{:max => "100", :min => "0", :step => "1", :type => "range", :value => "5"}/
+                %input{:max => "100", :min => "0", :step => "1", :type => "range", :value => "80"}/
+
 %br/
 .container.text-center
   .row.row-top
@@ -87,7 +89,7 @@
         %p.card-text.description Pizza
         %p.card-text.price $17.00
     .card.col-sm-3.zoom
-      %img.card-img-top{:alt => "Card image", :src => "https://www.readypac.com/wp-content/uploads/2016/04/RP_Classic_Caesar_Kit_OH_Crop-550x550.png", :style => "width:100%"}/
+      %img.card-img-top{:alt => "Card image", :src => "http://gzpizza.ca/wp-content/uploads/2017/09/Salad.png", :style => "width:100%"}/
       .card-body
         %h4.card-title Caesar Salad
         %p.card-text.description Salads

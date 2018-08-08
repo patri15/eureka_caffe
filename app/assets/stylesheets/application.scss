@@ -14,6 +14,7 @@
 
 @import "bootstrap";
 @import 'footer';
+@import 'navbar';
 @import 'header';
 @import 'home';
 @import 'about';
@@ -25,6 +26,9 @@ html, body {
     height:100%;
 }
 
-.main{
+.jumbotron-wrapper{
     background-image: url("https://www.passionclub.ro/upload/slider/slider-1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
