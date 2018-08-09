@@ -3,6 +3,12 @@
     .nav-link {
         color: black;
     }
+    a {
+      font-weight: bold;
+    }
+    span {
+      font-weight: initial;
+    }
 }
 
 .dropdown-toggle::after {

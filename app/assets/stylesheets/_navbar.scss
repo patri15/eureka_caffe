@@ -17,7 +17,7 @@
 }
 
 .nav-title {
-    padding-top: 5px;
+    padding-top: none;
     padding-left: 10px;
     transition: transform .2s;
 }
@@ -44,8 +44,6 @@
     padding-top: 5px;
 }
 
-@media only screen and (max-width: 600px) {
-    .detail {
-        background-color: black;
-    }
+.scrolled {
+    background-color: black;
 }

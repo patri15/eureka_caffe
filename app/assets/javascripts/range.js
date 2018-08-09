@@ -10,12 +10,13 @@ function getVals() {
       slide2 = slide1;
       slide1 = tmp;
     }
-  
-    var displayElement = parent.getElementsByClassName("rangeValues")[0];
-    displayElement.innerHTML = "$ " + slide1 + "k - $" + slide2 + "k";
+    
+    var labelTargetSelector = parent.dataset['target'];
+    var displayElement = document.querySelector(labelTargetSelector);
+    displayElement.innerHTML = "$" + slide1 + " - $" + slide2;
   }
   
-  window.onload = function() {
+  $( document ).on('turbolinks:load', function() {
     // Initialize Sliders
     var sliderSections = document.getElementsByClassName("range-slider");
     for (var x = 0; x < sliderSections.length; x++) {
@@ -28,4 +29,4 @@ function getVals() {
         }
       }
     }
-  };
+  });
