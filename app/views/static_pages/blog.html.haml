@@ -1,6 +1,30 @@
 - provide(:title, "Blog")
-.container-fluid
+.container-fluid.special
     .row
-        .col-lg-8.col-md-10.mx-auto
+        .col-lg-8.col-md-10.mx-auto.text-center
             %h1 Our Blog
-            %span Lorem ipsum
+            %span Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+.container-fluid.blog-content
+    .container.blog-description
+        %h3 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrude consectetur adipisicing elit, sed do eiusmod tempor incididunt.
+    .container-fluid
+        .row
+            .col-lg-7.col-md-7
+                %h1 Organic food
+                %h6  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+            .col-lg-5.col-md-5
+                %img{:alt => "Organic Food", :src => "https://theecologist.org/sites/default/files/styles/inline_l/public/NG_media/405406.jpg?itok=He2m--3m"}/
+        .row
+            .col-lg-5.col-md-5
+                %img{:alt => "Organic Food", :src => "https://theecologist.org/sites/default/files/styles/inline_l/public/NG_media/405406.jpg?itok=He2m--3m"}/
+            .col-lg-7.col-md-7
+                %h1 Organic food
+                %h6  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+        .row
+            .col-lg-7.col-md-7
+                %h1 Organic food
+                %h6  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+            .col-lg-5.col-md-5
+                %img{:alt => "Organic Food", :src => "https://theecologist.org/sites/default/files/styles/inline_l/public/NG_media/405406.jpg?itok=He2m--3m"}/
+        %br/
+        %br/

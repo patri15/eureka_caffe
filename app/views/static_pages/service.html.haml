@@ -7,7 +7,7 @@
         %i.fas.fa-bars
       #collapsibleNavbar2.collapse.navbar-collapse
         %ul.navbar-nav
-          .col-lg-3.col-md-2.text-left
+          .col-lg-3.col-md-3.text-left
             %li.nav-item.dropdown
               %a#navbardrop.nav-link.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
                 CATEGORY
@@ -16,7 +16,7 @@
                 %a.dropdown-item{:href => "#"} Breakfast
                 %a.dropdown-item{:href => "#"} Lunch
                 %a.dropdown-item{:href => "#"} Dinner
-          .col-lg-3.col-md-2
+          .col-lg-3.col-md-3
             %li.nav-item.dropdown
               %a#navbardrop.nav-link.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
                 SORTING
@@ -26,7 +26,7 @@
                 %a.dropdown-item{:href => "#"} Second Courses
                 %a.dropdown-item{:href => "#"} Salads
                 %a.dropdown-item{:href => "#"} Deserts
-          .col-lg-4.col-md-2
+          .col-lg-3.col-md-3
             %li.nav-item.dropdown
               %a#navbardrop.nav-link.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
                 VEGETARIAN
@@ -36,12 +36,11 @@
                 %a.dropdown-item{:href => "#"} Second Courses
                 %a.dropdown-item{:href => "#"} Salads
                 %a.dropdown-item{:href => "#"} Deserts
-          .col-lg-3.col-md-2
+          .col-lg-2.col-md-1
           %li.nav-item.dropdown
-            .col-lg-3
-              %a#navbardrop.nav-link.dropdown-toggle{"data-toggle" => "dropdown", :href => "#", :style => "color: black"}
-                PRICE
-          .col-lg-6.col-md-3
+            %a#navbardrop.nav-link.dropdown-toggle{"data-toggle" => "dropdown", :href => "#", :style => "color: black"}
+              PRICE
+          .col-lg-4.col-md-2
             %li.nav-item.dropdown
               %section.range-slider
                 %span.rangeValues
@@ -51,50 +50,50 @@
 %br/
 .container.text-center
   .row.row-top
-    .card.col-sm-3.zoom.start
+    .card.col-md-3.zoom.start
       %img.card-img-top{:alt => "Card image", :src => "http://miapasta.com/wp-content/themes/miapasta/images/menu/carbonara.png", :style => "width:100%"}/
       .card-body
         %h4.card-title Pasta Carbonara
         %p.card-text.description Second Courses
         %p.card-text.price $9.00
-    .card.col-sm-3.zoom
+    .card.col-md-3.zoom
       %img.card-img-top{:alt => "Card image", :src => "http://www.canisiusstroop.nl/en/wp-content/uploads/2016/03/34981064_l.png", :style => "size:130%"}/
       .card-body
         %h4.card-title Steak
         %p.card-text.description Second Courses
         %p.card-text.price $25.00
-    .card.col-sm-3.zoom
+    .card.col-md-3.zoom
       %img.card-img-top{:alt => "Card image", :src => "https://www.eatthe80.com/content/uploads/media/images/site/plate.png", :style => "width:100%"}/
       .card-body
         %h4.card-title Chicken Special
         %p.card-text.description Second Courses
         %p.card-text.price $18.00
-    .card.col-sm-3.zoom.end
+    .card.col-md-3.zoom.end
       %img.card-img-top{:alt => "Card image", :src => "https://www.pizzahut.com.cy/uploads/images/menu/lasagne%20bites_bolognaise_1443589071.png", :style => "width:100%"}/
       .card-body
         %h4.card-title Lasagna
         %p.card-text.description Second Courses
         %p.card-text.price $20.00
   .row.row-bottom
-    .card.col-sm-3.zoom.start
+    .card.col-md-3.zoom.start
       %img.card-img-top{:alt => "Card image", :src => "http://pngimg.com/uploads/pasta/pasta_PNG96.png", :style => "width:100%"}/
       .card-body
         %h4.card-title Pasta Prosciutto
         %p.card-text.description Second Courses
         %p.card-text.price $12.00
-    .card.col-sm-3.zoom
+    .card.col-md-3.zoom
       %img.card-img-top{:alt => "Card image", :src => "http://eatcaulipower.com/sites/default/files/product-images/Pizza-Margherita_1.png", :style => "size: 80%"}/
       .card-body
         %h4.card-title Pizza Margherita
         %p.card-text.description Pizza
         %p.card-text.price $17.00
-    .card.col-sm-3.zoom
+    .card.col-md-3.zoom
       %img.card-img-top{:alt => "Card image", :src => "http://gzpizza.ca/wp-content/uploads/2017/09/Salad.png", :style => "width:100%"}/
       .card-body
         %h4.card-title Caesar Salad
         %p.card-text.description Salads
         %p.card-text.price $14.00
-    .card.col-sm-3.zoom.end
+    .card.col-md-3.zoom.end
       %img.card-img-top{:alt => "Card image", :src => "https://zubuchon.com/wp-content/themes/ZubuChon/images/menu/soups/kalabasa-soup.png", :style => "width:100%"}/
       .card-body
         %h4.card-title Legumes Soup
