@@ -1,0 +1,27 @@
+.about-header {
+    background-image: url("https://www.passionclub.ro/upload/slider/slider-1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    text-shadow: 2px 2px 4px gray;
+    margin-bottom: 0px;
+    height: auto;
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+.about-content {
+    padding-top: 5%;
+    padding-bottom: 3%;
+    
+    h2 {
+        font-size: 4rem;
+    }
+    
+    .jumbotron {
+        background-color: rgb(255, 183, 89);
+        color:black;
+        text-shadow: none;
+    }
+}

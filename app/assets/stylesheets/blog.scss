@@ -1,0 +1,22 @@
+.special {
+    background-image: url("http://lokaso.in/wp-content/uploads/2018/06/vietnamese-fish-tacos-recipe-3w.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    .row {
+        padding-top: 100px;
+        color:white;
+        text-shadow: 2px 2px 4px black;
+    }
+}
+.blog-content {
+    .blog-description {
+        padding: 10%;
+    }
+    img {
+        height:300px;
+        width: 500px;
+        padding: none;
+    }
+}

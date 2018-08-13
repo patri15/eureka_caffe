@@ -1,0 +1,53 @@
+= render 'partials/header' 
+- provide(:title, "Service")
+%nav.navbar.nav-sort.navbar-expand-md
+  .container
+    .row
+      %button.navbar-toggler.nav-button-2{"data-target" => "#collapsibleNavbar2", "data-toggle" => "collapse", :type => "button"}
+        %i.fas.fa-bars
+      #collapsibleNavbar2.collapse.navbar-collapse
+        %ul.navbar-nav
+          .col-lg-3.col-md-3.text-left
+            %li.nav-item.dropdown
+              %a#navbardrop.nav-link.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+                CATEGORY
+                %i.fas.fa-angle-down{:style => "color: #ff9900"}
+              .dropdown-menu
+                %a.dropdown-item{:href => "#"} Breakfast
+                %a.dropdown-item{:href => "#"} Lunch
+                %a.dropdown-item{:href => "#"} Dinner
+          - ['Sorting', 'Vegetarian'].each do |category|
+            .col-lg-3.col-md-3
+              %li.nav-item.dropdown
+                %a#navbardrop.nav-link.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+                  = category
+                  %i.fas.fa-angle-down{:style => "color: #ff9900"}
+                .dropdown-menu
+                  %a.dropdown-item{:href => "#"} Entrees
+                  %a.dropdown-item{:href => "#"} Second Courses
+                  %a.dropdown-item{:href => "#"} Salads
+                  %a.dropdown-item{:href => "#"} Deserts
+          .col-lg-3.col-md-2
+            %li.nav-item.dropdown
+              %a#navbardrop.nav-link.dropdown-toggle{"data-toggle" => "dropdown", :href => "#", :style => "color: black"}
+                PRICE
+                %span.rangeValues
+          .col-lg-3.col-md-2
+            %li.nav-item.dropdown
+              %section.range-slider{ data: { target: '.rangeValues' } }
+                %input{:max => "100", :min => "0", :step => "1", :type => "range", :value => "5"}/
+                %input{:max => "100", :min => "0", :step => "1", :type => "range", :value => "80"}/
+
+%br/
+.container.text-center
+  .row.row-top
+    = render 'partials/card', title: 'Pasta Carbonara', description: 'Second Courses', price: '$9.00', src: 'http://miapasta.com/wp-content/themes/miapasta/images/menu/carbonara.png'
+    = render 'partials/card', title: 'Steak', description: 'Second Courses', price: '$25.00', src: 'http://www.canisiusstroop.nl/en/wp-content/uploads/2016/03/34981064_l.png'
+    = render 'partials/card', title: 'Chicken Special', description: 'Second Courses', price: '$18.00', src: 'https://www.eatthe80.com/content/uploads/media/images/site/plate.png'
+    = render 'partials/card', title: 'Lasagna', description: 'Second Courses', price: '$20.00', src: 'https://www.pizzahut.com.cy/uploads/images/menu/lasagne%20bites_bolognaise_1443589071.png'
+  .row.row-bottom
+    = render 'partials/card', title: 'Pasta Prosciutto', description: 'Second Courses', price: '$12.00', src: 'http://pngimg.com/uploads/pasta/pasta_PNG96.png'
+    = render 'partials/card', title: 'Pizza Margherita', description: 'Pizza', price: '$17.00', src: 'http://eatcaulipower.com/sites/default/files/product-images/Pizza-Margherita_1.png'
+    = render 'partials/card', title: 'Caesar Salad', description: 'Salads', price: '$14.00', src: 'http://gzpizza.ca/wp-content/uploads/2017/09/Salad.png'
+    = render 'partials/card', title: 'Legumes Soup', description: 'Entrees', price: '$7.00', src: 'https://zubuchon.com/wp-content/themes/ZubuChon/images/menu/soups/kalabasa-soup.png'
+  %br/
