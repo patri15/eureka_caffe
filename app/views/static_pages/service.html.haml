@@ -1,4 +1,4 @@
-= render 'layouts/header' 
+= render 'partials/header' 
 - provide(:title, "Service")
 %nav.navbar.nav-sort.navbar-expand-md
   .container
@@ -16,26 +16,17 @@
                 %a.dropdown-item{:href => "#"} Breakfast
                 %a.dropdown-item{:href => "#"} Lunch
                 %a.dropdown-item{:href => "#"} Dinner
-          .col-lg-3.col-md-3
-            %li.nav-item.dropdown
-              %a#navbardrop.nav-link.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
-                SORTING
-                %i.fas.fa-angle-down{:style => "color: #ff9900"}
-              .dropdown-menu
-                %a.dropdown-item{:href => "#"} Entrees
-                %a.dropdown-item{:href => "#"} Second Courses
-                %a.dropdown-item{:href => "#"} Salads
-                %a.dropdown-item{:href => "#"} Deserts
-          .col-lg-3.col-md-3
-            %li.nav-item.dropdown
-              %a#navbardrop.nav-link.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
-                VEGETARIAN
-                %i.fas.fa-angle-down{:style => "color: #ff9900"}
-              .dropdown-menu
-                %a.dropdown-item{:href => "#"} Entrees
-                %a.dropdown-item{:href => "#"} Second Courses
-                %a.dropdown-item{:href => "#"} Salads
-                %a.dropdown-item{:href => "#"} Deserts
+          - ['Sorting', 'Vegetarian'].each do |category|
+            .col-lg-3.col-md-3
+              %li.nav-item.dropdown
+                %a#navbardrop.nav-link.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+                  = category
+                  %i.fas.fa-angle-down{:style => "color: #ff9900"}
+                .dropdown-menu
+                  %a.dropdown-item{:href => "#"} Entrees
+                  %a.dropdown-item{:href => "#"} Second Courses
+                  %a.dropdown-item{:href => "#"} Salads
+                  %a.dropdown-item{:href => "#"} Deserts
           .col-lg-3.col-md-2
             %li.nav-item.dropdown
               %a#navbardrop.nav-link.dropdown-toggle{"data-toggle" => "dropdown", :href => "#", :style => "color: black"}
@@ -50,53 +41,13 @@
 %br/
 .container.text-center
   .row.row-top
-    .card.col-md-3.zoom.start
-      %img.card-img-top{:alt => "Card image", :src => "http://miapasta.com/wp-content/themes/miapasta/images/menu/carbonara.png", :style => "width:100%"}/
-      .card-body
-        %h4.card-title Pasta Carbonara
-        %p.card-text.description Second Courses
-        %p.card-text.price $9.00
-    .card.col-md-3.zoom
-      %img.card-img-top{:alt => "Card image", :src => "http://www.canisiusstroop.nl/en/wp-content/uploads/2016/03/34981064_l.png", :style => "size:130%"}/
-      .card-body
-        %h4.card-title Steak
-        %p.card-text.description Second Courses
-        %p.card-text.price $25.00
-    .card.col-md-3.zoom
-      %img.card-img-top{:alt => "Card image", :src => "https://www.eatthe80.com/content/uploads/media/images/site/plate.png", :style => "width:100%"}/
-      .card-body
-        %h4.card-title Chicken Special
-        %p.card-text.description Second Courses
-        %p.card-text.price $18.00
-    .card.col-md-3.zoom.end
-      %img.card-img-top{:alt => "Card image", :src => "https://www.pizzahut.com.cy/uploads/images/menu/lasagne%20bites_bolognaise_1443589071.png", :style => "width:100%"}/
-      .card-body
-        %h4.card-title Lasagna
-        %p.card-text.description Second Courses
-        %p.card-text.price $20.00
+    = render 'partials/card', title: 'Pasta Carbonara', description: 'Second Courses', price: '$9.00', src: 'http://miapasta.com/wp-content/themes/miapasta/images/menu/carbonara.png'
+    = render 'partials/card', title: 'Steak', description: 'Second Courses', price: '$25.00', src: 'http://www.canisiusstroop.nl/en/wp-content/uploads/2016/03/34981064_l.png'
+    = render 'partials/card', title: 'Chicken Special', description: 'Second Courses', price: '$18.00', src: 'https://www.eatthe80.com/content/uploads/media/images/site/plate.png'
+    = render 'partials/card', title: 'Lasagna', description: 'Second Courses', price: '$20.00', src: 'https://www.pizzahut.com.cy/uploads/images/menu/lasagne%20bites_bolognaise_1443589071.png'
   .row.row-bottom
-    .card.col-md-3.zoom.start
-      %img.card-img-top{:alt => "Card image", :src => "http://pngimg.com/uploads/pasta/pasta_PNG96.png", :style => "width:100%"}/
-      .card-body
-        %h4.card-title Pasta Prosciutto
-        %p.card-text.description Second Courses
-        %p.card-text.price $12.00
-    .card.col-md-3.zoom
-      %img.card-img-top{:alt => "Card image", :src => "http://eatcaulipower.com/sites/default/files/product-images/Pizza-Margherita_1.png", :style => "size: 80%"}/
-      .card-body
-        %h4.card-title Pizza Margherita
-        %p.card-text.description Pizza
-        %p.card-text.price $17.00
-    .card.col-md-3.zoom
-      %img.card-img-top{:alt => "Card image", :src => "http://gzpizza.ca/wp-content/uploads/2017/09/Salad.png", :style => "width:100%"}/
-      .card-body
-        %h4.card-title Caesar Salad
-        %p.card-text.description Salads
-        %p.card-text.price $14.00
-    .card.col-md-3.zoom.end
-      %img.card-img-top{:alt => "Card image", :src => "https://zubuchon.com/wp-content/themes/ZubuChon/images/menu/soups/kalabasa-soup.png", :style => "width:100%"}/
-      .card-body
-        %h4.card-title Legumes Soup
-        %p.card-text.description Entrees
-        %p.card-text.price $7.00
+    = render 'partials/card', title: 'Pasta Prosciutto', description: 'Second Courses', price: '$12.00', src: 'http://pngimg.com/uploads/pasta/pasta_PNG96.png'
+    = render 'partials/card', title: 'Pizza Margherita', description: 'Pizza', price: '$17.00', src: 'http://eatcaulipower.com/sites/default/files/product-images/Pizza-Margherita_1.png'
+    = render 'partials/card', title: 'Caesar Salad', description: 'Salads', price: '$14.00', src: 'http://gzpizza.ca/wp-content/uploads/2017/09/Salad.png'
+    = render 'partials/card', title: 'Legumes Soup', description: 'Entrees', price: '$7.00', src: 'https://zubuchon.com/wp-content/themes/ZubuChon/images/menu/soups/kalabasa-soup.png'
   %br/
