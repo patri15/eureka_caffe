@@ -8,6 +8,7 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.6'
+gem 'bcrypt',         '3.1.12'
 gem 'bootstrap', '~> 4.0.0.alpha3'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
@@ -49,7 +50,7 @@ group :development do
   gem 'listen',                '3.1.5'
   gem 'spring',                '2.0.2'
   gem 'spring-watcher-listen', '2.0.1'
-  gem "erb2haml"    
+  gem "erb2haml"
 end
 
 group :test do
