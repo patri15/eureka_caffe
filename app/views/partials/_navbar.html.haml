@@ -1,31 +1,47 @@
 %nav.navbar.navbar-expand-md.main-navbar.navbar-dark.fixed-top
-	.container	
-		%a.navbar-brand.mb-0.h1{:href => "/"}
-			.row
-				%img.nav-logo{:alt => "logo", :src => "https://cdn.onlinewebfonts.com/svg/img_255075.png", :style => "height:50px;width:50px;"}/
-				%span.nav-title 
-					EUREKA
-					%br
-					CAFFE
-		%button.navbar-toggler{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarSupportedContent", "data-toggle" => "collapse", :type => "button"}
-			%span.navbar-toggler-icon
-		#navbarSupportedContent.collapse.navbar-collapse
-			%ul.navbar-nav.ml-auto.detail
-				%li.nav-item
-					= link_to "Home", root_path, class: "nav-link active", id: 'hover-bg'
-				%li.nav-item.d-none.d-lg-block.d-xl-block
-					%i.fas.fa-circle
-				%li.nav-item
-					= link_to "About", about_path, class: "nav-link  active", id: 'hover-bg'
-				%li.nav-item.d-none.d-lg-block.d-xl-block
-					%i.fas.fa-circle
-				%li.nav-item
-					= link_to "Service", service_path, class: "nav-link  active", id: 'hover-bg'
-				%li.nav-item.d-none.d-lg-block.d-xl-block
-					%i.fas.fa-circle
-				%li.nav-item
-					= link_to "Blog", blog_path, class: "nav-link  active", id: 'hover-bg'
-				%li.nav-item.d-none.d-lg-block.d-xl-block
-					%i.fas.fa-circle
-				%li.nav-item
-					= link_to "Contacts", contacts_path, class: "nav-link  active", id: 'hover-bg'
+  .container
+    %a.navbar-brand.mb-0.h1{:href => "/"}
+      .row
+        %img.nav-logo{:alt => "logo", :src => "https://cdn.onlinewebfonts.com/svg/img_255075.png", :style => "height:50px;width:50px;"}/
+        %span.nav-title
+          EUREKA
+          %br/
+          CAFFE
+    %button.navbar-toggler{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarSupportedContent", "data-toggle" => "collapse", :type => "button"}
+      %span.navbar-toggler-icon
+    #navbarSupportedContent.collapse.navbar-collapse
+      %ul.navbar-nav.ml-auto.detail
+        %li.nav-item
+          = link_to "Home", root_path, class: "nav-link active", id: 'hover-bg'
+        %li.nav-item.d-none.d-lg-block.d-xl-block
+          %i.fas.fa-circle
+        %li.nav-item
+          = link_to "About", about_path, class: "nav-link  active", id: 'hover-bg'
+        %li.nav-item.d-none.d-lg-block.d-xl-block
+          %i.fas.fa-circle
+        %li.nav-item
+          = link_to "Service", service_path, class: "nav-link  active", id: 'hover-bg'
+        %li.nav-item.d-none.d-lg-block.d-xl-block
+          %i.fas.fa-circle
+        %li.nav-item
+          = link_to "Blog", blog_path, class: "nav-link  active", id: 'hover-bg'
+        %li.nav-item.d-none.d-lg-block.d-xl-block
+          %i.fas.fa-circle
+        %li.nav-item
+          = link_to "Contacts", contacts_path, class: "nav-link  active", id: 'hover-bg'
+        %li.nav-item.d-none.d-lg-block.d-xl-block
+          %i.fas.fa-circle
+        - if logged_in?
+          %li.nav-item= link_to "Users", '#', class: "nav-link  active", id: 'hover-bg'
+          %li.nav-item.dropdown
+            %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+              Account
+              %b.caret
+            %ul.dropdown-menu
+              %li= link_to "Profile", current_user
+              %li= link_to "Settings", '#'
+              %li.divider
+              %li
+                = link_to "Log out", logout_path, method: :delete
+        - else
+          %li.nav-item= link_to "Log in", login_path, class: "nav-link  active", id: 'hover-bg'
