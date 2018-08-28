@@ -1,4 +1,5 @@
-= render 'partials/header' 
+= render 'partials/navbar'
+= render 'partials/header'
 - provide(:title, "Service")
 %nav.navbar.nav-sort.navbar-expand-md
   .container
@@ -16,7 +17,7 @@
                 %a.dropdown-item{:href => "#"} Breakfast
                 %a.dropdown-item{:href => "#"} Lunch
                 %a.dropdown-item{:href => "#"} Dinner
-          - ['Sorting', 'Vegetarian'].each do |category|
+          - ['SORTING', 'VEGETARIAN'].each do |category|
             .col-lg-3.col-md-3
               %li.nav-item.dropdown
                 %a#navbardrop.nav-link.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
@@ -51,3 +52,4 @@
     = render 'partials/card', title: 'Caesar Salad', description: 'Salads', price: '$14.00', src: 'http://gzpizza.ca/wp-content/uploads/2017/09/Salad.png'
     = render 'partials/card', title: 'Legumes Soup', description: 'Entrees', price: '$7.00', src: 'https://zubuchon.com/wp-content/themes/ZubuChon/images/menu/soups/kalabasa-soup.png'
   %br/
+= render 'partials/footer'

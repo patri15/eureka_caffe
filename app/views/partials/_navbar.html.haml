@@ -32,16 +32,17 @@
         %li.nav-item.d-none.d-lg-block.d-xl-block
           %i.fas.fa-circle
         - if logged_in?
-          %li.nav-item= link_to "Users", '#', class: "nav-link  active", id: 'hover-bg'
-          %li.nav-item.dropdown
-            %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+          %li.nav-item= link_to "Users", users_path, class: "nav-link  active", id: 'hover-bg'
+          %li.nav-item.d-none.d-lg-block.d-xl-block
+            %i.fas.fa-circle
+          %li.dropdown
+            %a.nav-item.dropdown-toggle{"data-toggle" => "dropdown", :href => "#", class: "nav-link  active", id: 'hover-bg'}
               Account
               %b.caret
-            %ul.dropdown-menu
-              %li= link_to "Profile", current_user
-              %li= link_to "Settings", '#'
+            %ul.dropdown-menu.nav-menu
+              %li.nav-item= link_to "Profile", current_user, class: "nav-link  active", id: 'hover-bg'
+              %li.nav-item= link_to "Settings",  edit_user_path(current_user), class: "nav-link  active", id: 'hover-bg'
               %li.divider
-              %li
-                = link_to "Log out", logout_path, method: :delete
+              %li.nav-item= link_to "Log out", logout_path, method: :delete, class: "nav-link  active", id: 'hover-bg'
         - else
           %li.nav-item= link_to "Log in", login_path, class: "nav-link  active", id: 'hover-bg'

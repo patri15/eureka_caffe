@@ -1,2 +1,5 @@
 - provide(:title, @user.name)
-%h1 = @user.name, #{@user.email}
+= render 'partials/navbar'
+.jumbotron
+  %h1 #{@user.name}, #{@user.email}
+= render 'partials/footer'

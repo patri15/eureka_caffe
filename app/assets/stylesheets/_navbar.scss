@@ -1,49 +1,56 @@
 .container {
-    background: transparent;
+  background: transparent;
 }
 
 #hover-bg:hover {
-    color:#ff9900;
-    text-shadow: 0 0 3px black;
-    -ms-transform: scale(1.1); /* IE 9 */
-    -webkit-transform: scale(1.1); /* Safari 3-8 */
-    transform: scale(1.1); 
+  color:#ff9900;
+  text-shadow: 0 0 3px black;
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1);
 }
 
 .navbar-brand {
-    text-align: left;
-    line-height: 1;
-    text-shadow: none;  
+  text-align: left;
+  line-height: 1;
+  text-shadow: none;
 }
 
 .nav-title {
-    padding-top: none;
-    padding-left: 10px;
-    transition: transform .2s;
+  padding-top: none;
+  padding-left: 10px;
+  transition: transform .2s;
 }
 
 .nav-title:hover{
-    color:#ff9900;
-    text-shadow: 0 0 3px black;
-    -ms-transform: scale(1.1); /* IE 9 */
-    -webkit-transform: scale(1.1); /* Safari 3-8 */
-    transform: scale(1.1); 
+  color:#ff9900;
+  text-shadow: 0 0 3px black;
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1);
 }
 
 .nav-item{
-    text-shadow: none;
-    transition: transform .2s;
+  text-shadow: none;
+  transition: transform .2s;
 }
 
 .fa-circle {
-    color:#ff9900;
-    font-size: 5px;
+  color:#ff9900;
+  font-size: 5px;
 }
 
 .d-none {
-    padding-top: 5px;
+  padding-top: 5px;
 }
 
 .scrolled {
-    background-color: black;
+  background-color: black;
 }
+
+.nav-menu {
+  color: white;
+  background-color: transparent;
+  border-color: transparent;
+}
+
